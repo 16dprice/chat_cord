@@ -1,4 +1,5 @@
 const chatForm = document.getElementById('chat-form');
+const chatMessages = document.querySelector('.chat-messages');
 
 // we have access to io because of the <script src="/socket.io/socket.io.js"></script> tag in chat.html
 const socket = io();
@@ -7,6 +8,9 @@ const socket = io();
 socket.on('message', message => {
     console.log(message);
     outputMessage(message);
+
+    // scroll down
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 // message submit
