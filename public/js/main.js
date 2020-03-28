@@ -20,6 +20,10 @@ chatForm.addEventListener('submit', (e) => {
     const msg = e.target.elements.msg.value; // get the input by its id
 
     socket.emit('chatMessage', msg); // emit message to server
+
+    // clear input
+    e.target.elements.msg.value = '';
+    e.target.elements.msg.focus();
 });
 
 // output message to DOM
