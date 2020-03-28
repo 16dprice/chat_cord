@@ -1,8 +1,8 @@
 {
   "name": "chat_cord",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Realtime chat app with rooms",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
     "dev": "nodemon server"
